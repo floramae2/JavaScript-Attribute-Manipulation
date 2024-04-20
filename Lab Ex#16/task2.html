@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task #2: Toggling Image Source</title>
+</head>
+<style>
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+</style>
+<body>
+    <img id="myImage" src="image1.jpg" alt="Image 1">
+    <button onclick="toggleImage()">Toggle Image</button>
+
+    <script>
+        function toggleImage() {
+            var image = document.getElementById('myImage');
+            if (image.src.match(/image1\.jpg$/)) {
+                image.src = 'image2.jpg';
+            } else {
+                image.src = 'image1.jpg';
+            }
+        }
+    </script>
+</body>
+</html>

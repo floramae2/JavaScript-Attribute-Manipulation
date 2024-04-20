@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task #1: Changing Image Source</title>
+<style>
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+</head>
+<body>
+    <img id="image" src="image1.jpg" alt="Image 1">
+    <button id="changeButton">Change Image</button>
+
+    <script>
+        document.getElementById('changeButton').addEventListener('click', function() {
+            var image = document.getElementById('image');
+            if (image.src.endsWith('image1.jpg')) {
+                image.src = 'image2.jpg';
+                image.alt = 'Image 2';
+            } else {
+                image.src = 'image1.jpg';
+                image.alt = 'Image 1';
+            }
+        });
+    </script>
+</body>
+</html>

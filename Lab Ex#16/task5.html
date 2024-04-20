@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task #5: Dynamic Image Gallery</title>
+    <style>
+        /* Set a maximum width for the container */
+        .container {
+            max-width: 800px; /* Adjust as needed */
+            margin: 0 auto; /* Center the container */
+            padding: 20px;
+        }
+
+        /* Style the main image */
+        #mainImage {
+            max-width: 100%;
+            height: auto;
+            display: block; /* Ensure the image is centered */
+            margin: 0 auto; /* Center the image */
+            margin-bottom: 20px; /* Add some space below the image */
+        }
+
+        /* Style the gallery links */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        li:last-child {
+            margin-right: 0;
+        }
+
+        li a {
+            text-decoration: none;
+            color: #000;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        li a:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="mainImage" src="image1.jpg" alt="Image 1">
+        <ul>
+            <li><a href="#" onclick="changeImage('image1.jpg')">Image 1</a></li>
+            <li><a href="#" onclick="changeImage('image2.jpg')">Image 2</a></li>
+            <li><a href="#" onclick="changeImage('image3.jpg')">Image 3</a></li>
+            <li><a href="#" onclick="changeImage('image4.jpg')">Image 4</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function changeImage(src) {
+            document.getElementById('mainImage').src = src;
+            document.getElementById('mainImage').alt = src;
+        }
+    </script>
+</body>
+</html>

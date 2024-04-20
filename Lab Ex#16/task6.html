@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task #6: Dynamic Link Generator</title>
+</head>
+<body>
+    <label for="username">Username:</label>
+    <input type="text" id="username">
+    <button onclick="generateLink()">Generate Link</button>
+    <div id="linkContainer"></div>
+
+    <script>
+        function generateLink() {
+            var username = document.getElementById('username').value;
+            var linkContainer = document.getElementById('linkContainer');
+
+            var link = document.createElement('a');
+            link.href = "https://www.example.com/user" + username;
+            link.textContent = "Go to " + username + "'s profile";
+
+            linkContainer.innerHTML = ''; t
+            linkContainer.appendChild(link);
+        }
+    </script>
+</body>
+</html>

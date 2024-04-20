@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task #3: Updating Link Href</title>
+</head>
+<body>
+    <a id="myLink" href="http://example.com">Visit Example Website</a>
+    <button onclick="updateLink()">Update Link</button>
+
+    <script>
+        function updateLink() {
+            var link = document.getElementById('myLink');
+            link.href = 'http://newwebsite.com';
+            link.textContent = 'Visit New Website';
+        }
+    </script>
+</body>
+</html>
